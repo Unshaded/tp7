@@ -5,22 +5,32 @@ class personne {
 	protected $nom;
 	protected $prenom;
 }
+function __construct($id,$nom,$prenom){
+  $this->id=($id);
+  $this->nom=($nom);
+  $this->prenom=($prenom);
+}
 
-public function getNom{
+function __toString(){
+  return "personne = ".$this->nom." ".$this->prenom;
+}
+
+function getNom(){
   return $this->nom;
 }
 
-public function getPrenom{
+function getPrenom(){
   return $this->prenom;
 }
 
-public function setNom($qui){
+function setNom($qui){
   return $this->nom=($qui);
 }
 
-public function setPrenom($qui){
+function setPrenom($qui){
   return $this->prenom=($qui);
 }
+
 
 
 ?>
