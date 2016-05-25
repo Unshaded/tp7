@@ -30,7 +30,27 @@ class personne {
     return $this->prenom=($qui);
   }
 }
-$eleve = new personne(1,"Brasseleur","Lukas");
-echo $eleve;
+
+class contact extends personne{
+  protected $email;
+
+  function __construct($id,$nom,$prenom,$email){
+    parent::__construct($id,$nom,$prenom);
+    $this->email=($email);
+  }
+
+  function __toString(){
+    return parent::__toString()." email = ".$this->email;
+  }
+
+  function getEmail(){
+    return $this->email;
+  }
+  function setEmail($mail){
+    return $this->email=($mail);
+  }
+}
+$contact = new contact(1,"Brasseleur","Lukas","lukas-B@gmail.com");
+echo $contact;
 ?>
 
